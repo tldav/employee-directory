@@ -7,7 +7,7 @@ class SearchBar extends Component {
 
 	render() {
 		return (
-			<div className="ui segment" style={{}}>
+			<div className="ui segment" style={{ marginBottom: "40px" }}>
 				<form className="ui form">
 					<div className="field ">
 						<label>Search Employee by Name</label>

@@ -13,8 +13,12 @@ class EmployeeCard extends Component {
 							alt="mage"
 						/>
 					</div>
-					<div className="col-2">Name</div>
-					<div className="col-2">email</div>
+					<div className="col-3 align-self-center d-flex justify-content-center">
+						<h3>Name</h3>
+					</div>
+					<div className="col-3 align-self-center d-flex justify-content-end">
+						<h3>Email</h3>
+					</div>
 				</div>
 			</div>
 		);
