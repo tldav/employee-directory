@@ -1,15 +1,19 @@
 import React, { Component, Fragment } from "react";
 import Navbar from "./components/Navbar";
+import SearchBar from "./components/SearchBar";
 
 class App extends Component {
 	state = {
-		users: []
+		employees: []
 	};
 	render() {
 		return (
-			<div style={{ backgroundColor: "black" }}>
+			<Fragment>
 				<Navbar />
-			</div>
+				<div className="ui container" style={{ marginTop: "20px" }}>
+					<SearchBar />
+				</div>
+			</Fragment>
 		);
 	}
 }
