@@ -1,7 +1,17 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
+import Navbar from "./components/Navbar";
 
-function App() {
-	return <h2>Pending content</h2>;
+class App extends Component {
+	state = {
+		users: []
+	};
+	render() {
+		return (
+			<div style={{ backgroundColor: "black" }}>
+				<Navbar />
+			</div>
+		);
+	}
 }
 
 export default App;
