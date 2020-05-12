@@ -13,6 +13,7 @@ class SearchBar extends Component {
 						<label>Search Employee by Name</label>
 						<input
 							type="text"
+							// Keeping the updated state
 							value={this.state.term}
 							onChange={(e) =>
 								this.setState({ term: e.target.value })
