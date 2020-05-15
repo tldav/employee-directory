@@ -22,7 +22,7 @@ class SearchBar extends Component {
 								marginBottom: "5px"
 							}}
 							type="text"
-							// Keeping the updated state
+							// Keeping the value set to state term makes this a controlled element.
 							value={this.state.term}
 							onChange={(e) =>
 								this.setState({ term: e.target.value })

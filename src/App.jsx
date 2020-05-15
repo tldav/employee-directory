@@ -9,10 +9,12 @@ class App extends Component {
 		employees: []
 	};
 
+	// Makes a request to a dummy data api upon the first page render.
 	componentDidMount() {
 		axios
 			.get("https://randomuser.me/api/?results=50&nat=us")
 			.then((response) => {
+				this.setState({ employees: response.data.results });
 				console.log(response.data.results);
 			});
 	}
@@ -23,7 +25,7 @@ class App extends Component {
 				<Navbar />
 				<div className="ui container" style={{ marginTop: "20px" }}>
 					<SearchBar />
-					<EmployeeCard />
+					<EmployeeCard employees={this.state.employees} />
 				</div>
 			</Fragment>
 		);
