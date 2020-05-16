@@ -20,26 +20,11 @@ class App extends Component {
 	}
 
 	onSearchSubmit = (term) => {
-		// if (term === first || term === last) {
-		// 	this.setState({ employees: term });
-		// }
-
-		var searchedEmployee = this.state.employees.filter(({ name }) => {
-			if (name.first === term || name.last === term) {
-				// this.setState({ employees: employee });
-				// console.log(name.first);
-
-				this.setState({ employees: searchedEmployee });
-			}
+		const searchedEmployee = this.state.employees.filter(({ name }) => {
+			return name.first === term || name.last === term;
 		});
 
-		// console.log(searchedEmployee);
-
-		// console.log(term);
-
-		// console.log(this.state.employees[0].name);
-
-		// employees.name.first && employees.name.last
+		this.setState({ employees: searchedEmployee });
 	};
 
 	render() {
