@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
-import axios from "axios";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
 import EmployeeCard from "./components/EmployeeCard";
+import API from "./utils/api";
 
 class App extends Component {
 	state = {
@@ -11,12 +11,10 @@ class App extends Component {
 
 	// Makes a request to a dummy data api upon the first page render.
 	componentDidMount() {
-		axios
-			.get("https://randomuser.me/api/?results=50&nat=us")
-			.then((response) => {
-				this.setState({ employees: response.data.results });
-				console.log(response.data.results);
-			});
+		API.getRandomEmployees().then((response) => {
+			this.setState({ employees: response.data.results });
+			console.log(response.data.results);
+		});
 	}
 
 	onSearchSubmit = (term) => {
