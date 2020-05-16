@@ -2,31 +2,14 @@ import React, { Component } from "react";
 import "./EmployeeCard.css";
 
 class EmployeeCard extends Component {
-	state = {};
-
-	canary = () => {
-		console.log(this.props);
-	};
-
-	// people = () => {
-	// 	const dudes = this.props.employees.map(({name.first, name.last}) => {
-	// 		dude = {};
-	// 	});
-	// };
-
-	// getEmployees = () => {};
-
-	// props.email
-	// props.name.first & props.name.last
-	// props.picture.medium
-
 	render() {
+		// maps through props, which is the array of employees, and adds the relevant information for each employee to a very quickly styled horizontal card.
 		const employees = this.props.employees.map(
 			({ email, name, picture, id }) => {
 				return (
 					<div className="container employee-card">
 						<div className="row justify-content-around">
-							<div className="col-3 ">
+							<div className="col-2 ">
 								<img
 									src={picture.medium}
 									alt={name.first}
@@ -47,7 +30,7 @@ class EmployeeCard extends Component {
 			}
 		);
 
-		return <div>{employees}</div>;
+		return <>{employees}</>;
 	}
 }
 export default EmployeeCard;

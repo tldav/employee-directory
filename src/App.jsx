@@ -19,12 +19,35 @@ class App extends Component {
 			});
 	}
 
+	onSearchSubmit = (term) => {
+		// if (term === first || term === last) {
+		// 	this.setState({ employees: term });
+		// }
+
+		var searchedEmployee = this.state.employees.filter(({ name }) => {
+			if (name.first === term || name.last === term) {
+				// this.setState({ employees: employee });
+				// console.log(name.first);
+
+				this.setState({ employees: searchedEmployee });
+			}
+		});
+
+		// console.log(searchedEmployee);
+
+		// console.log(term);
+
+		// console.log(this.state.employees[0].name);
+
+		// employees.name.first && employees.name.last
+	};
+
 	render() {
 		return (
 			<Fragment>
 				<Navbar />
 				<div className="ui container" style={{ marginTop: "20px" }}>
-					<SearchBar />
+					<SearchBar onSearchSubmit={this.onSearchSubmit} />
 					<EmployeeCard employees={this.state.employees} />
 				</div>
 			</Fragment>

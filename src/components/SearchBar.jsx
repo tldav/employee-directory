@@ -5,6 +5,11 @@ class SearchBar extends Component {
 		term: ""
 	};
 
+	onFormSubmit = (event) => {
+		event.preventDefault();
+		this.props.onSearchSubmit(this.state.term);
+	};
+
 	render() {
 		return (
 			<div
@@ -13,7 +18,7 @@ class SearchBar extends Component {
 					marginBottom: "40px"
 				}}
 			>
-				<form className="ui form">
+				<form className="ui form" onSubmit={this.onFormSubmit}>
 					<div className="field ">
 						<label>Search Employee by Name</label>
 						<input
