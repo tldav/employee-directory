@@ -14,7 +14,7 @@ A simple employee directory. The app was created using React, axios, and randomu
 
 [Link to random user API](https://randomuser.me/)
 
-The application was deployed using Heroku: [URL](https://desolate-tundra-52266.herokuapp.com/)
+The application was deployed using Heroku: https://desolate-tundra-52266.herokuapp.com/
 
 ## Contributing
 
